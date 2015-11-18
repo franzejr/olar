@@ -2,12 +2,21 @@ require 'spec_helper'
 require 'olar_generator'
 
 describe OlarGenerator do
-    describe '.olar' do
+    subject(:gen) { OlarGenerator }
 
+    describe '.olar' do
+      context 'it does olar!' do
+        it '' do
+          expect(gen.olar('Oi, meu amigo')).to eq 'Oi,.meu.amigor.'
+        end
+      end
+
+      context 'when it finishes with a special character' do
+
+      end
     end
-    
+
     describe '.add_r' do
-      subject(:gen) { OlarGenerator }
 
       context 'when adds successfully' do
         it { expect(gen.add_r('amigo')).to eq 'amigor' }
@@ -16,8 +25,13 @@ describe OlarGenerator do
       end
 
       context 'when it passes a non-alphabetic letter' do
-        it { expect(gen.add_r('123')).to be_nil }
+        it 'returns the non-alphabetic character' do
+          expect(gen.add_r('123')).to eq '123'
+        end
       end
+    end
 
+    describe '.add_point' do
+      it { expect(gen.add_point('amigo')).to eq 'amigo.' }
     end
 end
