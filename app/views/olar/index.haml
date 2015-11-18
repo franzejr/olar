@@ -1,0 +1,14 @@
+.jumbotron
+  .container
+    %h1 Olar
+    %p Olarrr
+
+    = form_tag('/generate_olar', remote: true, method: :post)
+
+    #form-group
+      %textarea.form-control{name: 'content', cols: '40', rows:'10' }
+
+    #form-group.pull-right
+      %button.btn.btn-primary.btn-lg{ type: 'submit' }
+        Gerar
+    #result
