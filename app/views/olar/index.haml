@@ -1,16 +1,16 @@
 .jumbotron
   .container.span5
-    %h1 Olar
-    %p Olarrr
+    %h1.text-center OLAR
+    %h4 Fali.com.seus.amigos.no.dialeto.olar
 
     = form_tag('/generate_olar', remote: true, method: :post)
 
     .form-group
-      %textarea.form-control{name: 'content', cols: '40', rows:'10' }
+      %textarea.form-control{name: 'content', cols: '40', rows:'10', placeholder: 'Traduza.seu.textor.para.olar' }
 
     .form-group
       %button.pull-right.btn.btn-primary.btn-lg{ type: 'submit' }
-        Gerar
+        Traduzir
 
     .row
       .col-sm-12
