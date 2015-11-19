@@ -36,6 +36,7 @@ describe OlarGenerator do
       context 'when it passes a non-alphabetic letter' do
         it 'returns the non-alphabetic character' do
           expect(gen.add_r('123')).to eq '123'
+          expect(gen.add_r('!@#@!')).to eq '!@#@!'
         end
       end
     end
