@@ -1,6 +1,6 @@
 # Olar
 
-![Fali meu amigo](http://memecrunch.com/meme/2NKRU/olar/image.png)
+![Fali meu amigo](olar_fali_meu_amigo.png)
 
 Ideia baseada em http://archive.is/B1AXl#selection-449.0-449.6.
 
