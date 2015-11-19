@@ -7,7 +7,7 @@
 Ideia baseada em http://archive.is/B1AXl#selection-449.0-449.6.
 
 ## Problema
-Dado uma string, é necessário aplicar as seguintes [regras](http://archive.is/B1AXl#selection-449.0-449.6.).
+Implementação do dialeto "olar".
 
 ## Regras utilizadas
 
