@@ -1,56 +1,42 @@
 require 'spec_helper'
-require 'olar_generator'
 
 describe OlarGenerator do
-    subject(:gen) { OlarGenerator }
+    subject(:gen) { OlarGenerator.new('olar, meu amigo') }
 
-    describe '.olar' do
+    describe '.result' do
       context 'it does olar!' do
         it 'runs all the olar rules and return the string' do
-          expect(gen.olar('Oi, meu amigo')).to eq 'Oi,meu.amigor.'
+          expect(gen.apply_mais.apply_r.result).to eq 'olar,meu.amigor'
         end
       end
     end
 
-    describe '.add_mais' do
+    describe '.apply_mais' do
       context 'when it receives mais' do
+        let(:gen) { OlarGenerator.new('mas') }
         it 'changes mas to mais' do
-          expect(gen.add_mais('mas')).to eq 'mais'
+          expect( gen.apply_mais.result).to eq 'mais'
         end
       end
 
       context 'when it does not receive mais' do
+        let(:gen) { OlarGenerator.new('olar') }
         it 'changes mas to mais' do
-          expect(gen.add_mais('olar')).to eq 'olar'
+          expect( gen.apply_mais.result).to eq 'olar'
         end
       end
     end
 
-    describe '.add_r' do
+    describe '.apply_r' do
       context 'when adds successfully' do
-        it { expect(gen.add_r('amigo')).to eq 'amigor' }
-        it { expect(gen.add_r('amiga')).to eq 'amigar' }
-        it { expect(gen.add_r('pe')).to eq 'per' }
+        let(:gen) { OlarGenerator.new('ola') }
+        it { expect( gen.apply_r.result).to eq 'olar' }
       end
 
       context 'when it passes a non-alphabetic letter' do
+        let(:gen) { OlarGenerator.new('132321321') }
         it 'returns the non-alphabetic character' do
-          expect(gen.add_r('123')).to eq '123'
-          expect(gen.add_r('!@#@!')).to eq '!@#@!'
-        end
-      end
-    end
-
-    describe '.add_point' do
-      context 'when it finishes with a non-special character' do
-        it 'adds a point at the end' do
-          expect(gen.add_point('amigo')).to eq 'amigo.'
-        end
-      end
-
-      context 'when it finishes with a special character' do
-        it 'returns the word itself' do
-          expect(gen.add_point('amigo!')).to eq 'amigo!'
+          expect( gen.apply_r.result).to eq '132321321'
         end
       end
     end
