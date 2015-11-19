@@ -1,0 +1,5 @@
+I"@(function() {
+  $('#result-panel').hide();
+
+}).call(this);
+:ET

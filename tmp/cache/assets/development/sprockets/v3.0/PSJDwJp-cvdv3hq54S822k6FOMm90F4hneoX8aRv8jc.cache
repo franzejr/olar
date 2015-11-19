@@ -1,0 +1,5 @@
+I"2(function() {
+  alert('ss');
+
+}).call(this);
+:ET

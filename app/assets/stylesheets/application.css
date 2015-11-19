@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+.container-fluid {
+  padding-top: 20px;
+}
+
+#result-panel {
+  margin-top: 20px;
+}
