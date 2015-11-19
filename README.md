@@ -4,6 +4,8 @@
 
 Ideia baseada em http://archive.is/B1AXl#selection-449.0-449.6.
 
+[![Code Climate](https://codeclimate.com/github/franzejr/olar/badges/gpa.svg)](https://codeclimate.com/github/franzejr/olar)
+
 ## Problema
 Dado uma string, é necessário aplicar as seguintes [regras](http://archive.is/B1AXl#selection-449.0-449.6.).
 
