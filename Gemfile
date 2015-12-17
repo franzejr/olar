@@ -6,7 +6,7 @@ gem 'rails', '4.2.4'
 gem 'pry'
 gem 'responders'
 #Haml
-gem 'haml'
+gem 'slim'
 # Puma
 gem 'puma'
 #Use SCSS for stylesheets
